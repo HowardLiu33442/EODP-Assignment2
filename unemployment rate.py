@@ -24,5 +24,8 @@ for a, b in zip(x, female):
     plt.text(a, b, b, ha='center', va='bottom', fontsize=10)
 plt.legend()
 plt.title('Unemployment Rate During COVID-19(Male vs. Female)',fontsize=12)
+plt.ylabel('Unemployment Rate(%)', fontsize=10)
+plt.yticks(fontweight='bold')
+plt.xticks(fontweight='bold')
 plt.savefig('unemployment rate.png', format='png')
 plt.show()
