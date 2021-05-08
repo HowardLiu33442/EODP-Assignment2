@@ -29,3 +29,25 @@ plt.yticks(fontweight='bold')
 plt.xticks(fontweight='bold')
 plt.savefig('unemployment rate.png', format='png')
 plt.show()
+
+male1 = []
+for num in Labour['Participation rate ;  > Males ;.1'][513:]:
+    male1.append(float(num))
+female1 = []
+for num in Labour['Participation rate ;  > Females ;.1'][513:]:
+    female1.append(float(num))
+x1 = [datetime.strptime(d,'%b-%Y').date() for d in date_time]
+plt.plot(x1,male1,linewidth = '1', label = "Male", color='b', linestyle='-', marker='s',markersize=6, markeredgecolor='black',markerfacecolor='#87CEFA')
+for a, b in zip(x1, male1):
+    plt.text(a, b-0.3, b, ha='center', va='top', fontsize=10)
+plt.plot(x1,female1,linewidth = '1', label = "Female", color='green', linestyle='-', marker='o',markersize=6, markeredgecolor='black',markerfacecolor='#7FFFD4')
+for a, b in zip(x1, female1):
+    plt.text(a, b+0.3, b, ha='center', va='bottom', fontsize=10)
+plt.legend()
+plt.title('Participation Rate During COVID-19(Male vs. Female)',fontsize=12)
+plt.ylabel('Participation Rate(%)', fontsize=10)
+plt.yticks(fontweight='bold')
+plt.xticks(fontweight='bold')
+plt.savefig('participation rate.png', format='png')
+plt.show()
+
