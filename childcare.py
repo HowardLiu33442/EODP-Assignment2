@@ -19,7 +19,7 @@ for rect in male + female:
 plt.xticks(arange(len(childcare['Who'].tolist())), childcare['Who'].tolist(), fontweight='bold')
 plt.yticks(fontweight='bold')
 plt.legend()
-plt.title('Time spent on doing activities on weekdays(Female vs. Male)', fontsize=12)
+plt.title('Time Spent on Doing Activities on Weekdays(Female vs. Male)', fontsize=12)
 plt.xlabel('Activity',fontsize=10)
 plt.ylabel('Time(minutes)', fontsize=10)
 plt.savefig('childcare.png', format='png') 
