@@ -16,6 +16,6 @@ data = {'Male': male, 'Female': female}
 df = pd.DataFrame(data,columns=['Male','Female'], index = work_from_home['Unnamed: 0'].tolist())
 plt.style.use('ggplot')
 df.plot.barh(alpha=0.7)
-plt.title('Proportion of work from home arrangements between genders', fontsize=12)
+plt.title('Proportion of Work from Home Arrangement(Male vs. Female)', fontsize=12)
 plt.savefig('work from home arragement.png', format='png',dpi=200,bbox_inches='tight')
 plt.show()
